@@ -1,3 +1,4 @@
+// open color site 참고 (https://yeun.github.io/open-color/)
 export const color = {
   gray: {
     0: '#f8f9fa',
@@ -10,5 +11,29 @@ export const color = {
     7: '#495057',
     8: '#343a40',
     9: '#212529',
+  },
+  red: {
+    0: '#fff5f5',
+    1: '#ffe3e3',
+    2: '#ffc9c9',
+    3: '#ffa8a8',
+    4: '#ff8787',
+    5: '#ff6b6b',
+    6: '#fa5252',
+    7: '#f03e3e',
+    8: '#e03131',
+    9: '#c92a2a',
+  },
+  pink: {
+    0: '#fff0f6',
+    1: '#ffdeeb',
+    2: '#fcc2d7',
+    3: '#faa2c1',
+    4: '#f783ac',
+    5: '#f06595',
+    6: '#e64980',
+    7: '#d6336c',
+    8: '#c2255c',
+    9: '#a61e4d',
   },
 };
