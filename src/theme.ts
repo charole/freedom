@@ -36,4 +36,16 @@ export const color = {
     8: '#c2255c',
     9: '#a61e4d',
   },
+  grape: {
+    0: '#f8f0fc',
+    1: '#f3d9fa',
+    2: '#eebefa',
+    3: '#e599f7',
+    4: '#da77f2',
+    5: '#cc5de8',
+    6: '#be4bdb',
+    7: '#ae3ec9',
+    8: '#9c36b5',
+    9: '#862e9c',
+  },
 };
