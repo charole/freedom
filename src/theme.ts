@@ -60,4 +60,16 @@ export const color = {
     8: '#6741d9',
     9: '#5f3dc4',
   },
+  indigo: {
+    0: '#edf2ff',
+    1: '#dbe4ff',
+    2: '#bac8ff',
+    3: '#91a7ff',
+    4: '#748ffc',
+    5: '#5c7cfa',
+    6: '#4c6ef5',
+    7: '#4263eb',
+    8: '#3b5bdb',
+    9: '#364fc7',
+  },
 };
