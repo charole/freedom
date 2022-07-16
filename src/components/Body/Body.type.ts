@@ -1,4 +1,5 @@
-export type BodyProps = {
+type BodyProps = {
   firstName: string;
   lastName: string;
 };
+export type { BodyProps };
