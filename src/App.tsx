@@ -2,6 +2,7 @@ import GlobalStyle from './GlobalStyle';
 import Header from './components/Header/Header';
 import Checkbox from './components/Checkbox';
 import useInput from './hooks/useInput';
+import Body from './components/Body';
 
 function App() {
   const [checked, changeHandler] = useInput<boolean>(false);
@@ -11,6 +12,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Checkbox name="chk1" value={checked} onChange={changeHandler} />
+      <Body firstName="Insu" lastName="Choi" />
     </>
   );
 }
