@@ -1,7 +1,7 @@
-import { StyledHeader } from "./Header.style";
+import { StyledHeader } from './Header.style';
 
-const Header: React.FC = () => {
+function Header() {
   return <StyledHeader>header!!</StyledHeader>;
-};
+}
 
 export default Header;
