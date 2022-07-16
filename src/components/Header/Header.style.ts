@@ -7,6 +7,7 @@ export const StyledHeader = styled.div`
   position: sticky;
   top: 0;
   z-index: 100;
+  background: ${color.red[5]};
 
   background: ${css`
     ({color: {gray}}) => {
