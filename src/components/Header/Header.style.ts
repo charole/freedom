@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { color } from '@/theme';
 
 export const StyledHeader = styled.div`
@@ -8,10 +8,4 @@ export const StyledHeader = styled.div`
   top: 0;
   z-index: 100;
   background: ${color.red[5]};
-
-  background: ${css`
-    ({color: {gray}}) => {
-      r
-    }
-  `};
 `;
