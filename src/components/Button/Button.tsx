@@ -1,6 +1,6 @@
 import ButtonView from './ButtonView.style';
 
-const Button = (props: any) => {
+const Button = () => {
   return <ButtonView>Click Me~</ButtonView>;
 };
 
