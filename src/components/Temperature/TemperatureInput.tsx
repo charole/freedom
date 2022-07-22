@@ -9,7 +9,6 @@ const temperatureScale = {
 const TemperatureInput = ({
   scale,
   temperature,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onTemperChange,
 }: TemperatureInputType) => {
   const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
