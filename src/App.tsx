@@ -23,7 +23,7 @@ function App() {
         onChange={inputChangeHandler}
       />
       <Checkbox name="chk1" value={checked} onChange={changeHandler} />
-      <Body firstName="Insu" lastName="Choi" />
+      <Body />
     </>
   );
 }
