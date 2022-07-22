@@ -1,8 +1,8 @@
-export type CommentProps = {
+export interface CommentProps {
   author: {
-    avatarUrl?: string;
+    avatarUrl: string;
     name: string;
   };
   text: string;
   date: string;
-};
+}
