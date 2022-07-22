@@ -1,41 +1,29 @@
-import Comment from '../Comment';
+import { FormEvent, useState } from 'react';
 import Button from '../Button';
-import { BodyProps } from './Body.type';
+import TodoView from '../Todo';
 
-const formatName = ({ firstName, lastName }: BodyProps) => {
+const todo = ['Typescript', 'Javascript', 'CSS'];
+
+const Body = () => {
+  const [todoList, setTotoList] = useState(todo);
+
+  const handlerFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const todo: string = (e.target as HTMLFormElement).todo.value;
+    setTotoList([...todoList, todo]);
+    (e.target as HTMLFormElement).todo.value = ''; // submit후 input 초기화
+  };
+
   return (
     <>
-      {firstName} {lastName}
+      <h1>To-Do List</h1>
+      <form onSubmit={handlerFormSubmit}>
+        <input name="todo" id="todo" />
+        <Button label="추가" type="submit" />
+      </form>
+      {/* Todo List View */}
+      <TodoView todos={todoList} />
     </>
-  );
-};
-
-const user: BodyProps = { firstName: '', lastName: '' };
-
-const author: { avatarUrl?: string; name: string } = {
-  avatarUrl: '../../choi.jpg',
-  name: '최민혁',
-};
-
-const text = '이것은 리액트 아닙니다.';
-const date = '2022-07-16';
-
-const Body = ({ firstName, lastName }: BodyProps) => {
-  user.firstName = firstName;
-  user.lastName = lastName;
-  const element = <h2>{formatName(user)}!</h2>;
-
-  return (
-    <div id="wrap-body">
-      <div>{element}</div>
-      {/* 하위 컴포넌트에 prop를 전달해봄. */}
-      <Comment author={author} text={text} date={date} />
-      <Button
-        onClick={() => {
-          console.info('ttt');
-        }}
-      />
-    </div>
   );
 };
 
