@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import { client } from '@/api';
+import { service } from '@/api';
 import {
   getGithubUserInfoResponseData,
   ReactQueryTestPageProps,
@@ -10,22 +10,25 @@ import { Container } from './ReactQueryTestPage.styles';
 function ReactQueryTestPage({ username }: ReactQueryTestPageProps) {
   const fetchUserInfo = async () => {
     try {
-      const { data } = await client.get<getGithubUserInfoResponseData>(
-        `/users/${username}`,
-      );
+      const { data } = await service.github.get<
+        Partial<getGithubUserInfoResponseData>
+      >(`/users/${username}`);
       return data;
     } catch (err) {
-      return { login: undefined };
+      return { login: undefined, name: undefined };
     }
   };
   const { isLoading, data } = useQuery(['test', username], fetchUserInfo);
-  console.info(data);
 
   return (
     <Container className={isLoading ? 'loading' : ''}>
       <div>
-        <span>username</span>
-        <span>{data?.login}</span>
+        <span>login:&nbsp;&nbsp;</span>
+        <span>{(data?.login && data.login) || '없음'}</span>
+      </div>
+      <div>
+        <span>name:&nbsp;&nbsp;</span>
+        <span>{(data?.name && data.name) || '없음'}</span>
       </div>
     </Container>
   );

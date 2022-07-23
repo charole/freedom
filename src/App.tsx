@@ -25,7 +25,6 @@ function App() {
         onChange={inputChangeHandler}
         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
           const keyPressed = e.key;
-          console.info(username);
           if (keyPressed === 'Enter') setForm(username);
         }}
       />
