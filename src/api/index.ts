@@ -1,5 +1,5 @@
-import axios from 'axios';
+import { github } from './github';
 
-export const client = axios.create({
-  baseURL: 'https://api.github.com',
-});
+export const service = {
+  github,
+};
