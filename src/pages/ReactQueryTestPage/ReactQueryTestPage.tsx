@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from 'react-query';
 import { client } from '@/api';
 import {
@@ -30,4 +31,4 @@ function ReactQueryTestPage({ username }: ReactQueryTestPageProps) {
   );
 }
 
-export default ReactQueryTestPage;
+export default React.memo(ReactQueryTestPage);
